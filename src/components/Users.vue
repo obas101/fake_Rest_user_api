@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="stylus">
 <b-list-group>
   <b-list-group-item v-bind:key="user.id" v-for="user in allUsers" class="inline">{{user.name}}
@@ -16,7 +16,7 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
     name: 'Users',
     methods: {
-        ...mapActions(['fetchNames', 'deleteUser']),
+        ...mapActions(["fetchNames", "deleteUser"])
     },
     computed: mapGetters(['allUsers']),
     created() {

@@ -19,6 +19,7 @@ const actions = {
     },
     async deleteUser ({ commit }, id) {
         await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+         
         commit('removeUser', id)
     }
 };
