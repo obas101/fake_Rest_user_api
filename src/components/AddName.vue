@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div>
+        
             <form @submit="onSubmit">
                 <input type="text" placeholder="Add Names..." v-model="name">
                 <input type="submit" value="Submit">
             </form>
-        </div>
+    
     </div>
 </template>
 
@@ -29,5 +29,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
