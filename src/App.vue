@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="bodywork">
-    <AddName />
+    <AddName class="sty" />
     <Users />
     </div>
   </div>
@@ -25,7 +25,10 @@ export default {
   margin-top: 60px;
 }
 .bodywork {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
+}
+.sty{
+  margin-bottom: 1rem;
 }
 </style>

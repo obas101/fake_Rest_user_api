@@ -2,8 +2,8 @@
     <div>
         
             <form @submit="onSubmit">
-                <input type="text" placeholder="Add Names..." v-model="name">
-                <input type="submit" value="Submit">
+                <input class="textI" type="text" placeholder="Add Names..." v-model="name">
+                <input class="btnI" type="submit" value="ADD">
             </form>
     
     </div>
@@ -33,4 +33,13 @@ this.addUsers(user)
 </script>
 
 <style scoped>
+form {
+    display: flex;
+}
+.textI {
+    flex: 8;
+}
+.btnI {
+    flex: 2
+}
 </style>

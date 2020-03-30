@@ -2,7 +2,7 @@
     <div class="stylus">
 <b-list-group>
   <b-list-group-item v-bind:key="user.id" v-for="user in allUsers" class="inline">{{user.name}}
-      <i class="fas fa-trash-alt"></i>
+      <i @click="deleteUser(user.id)" class="fas fa-trash-alt icon"></i>
   </b-list-group-item>
 </b-list-group>
 
@@ -16,7 +16,7 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
     name: 'Users',
     methods: {
-        ...mapActions(['fetchNames'])
+        ...mapActions(['fetchNames', 'deleteUser']),
     },
     computed: mapGetters(['allUsers']),
     created() {
@@ -27,10 +27,15 @@ export default {
 
 <style scoped>
     .inline{
-        display: inline-block;
+        display: flex
     }
-    i {
+    .icon {
+        /* position: absolute; */
+        flex: 10rem;
         position: absolute;
-        margin-left: 5rem;
+        margin-left: 80%; 
+        cursor: pointer;       
+
     }
+    
 </style>

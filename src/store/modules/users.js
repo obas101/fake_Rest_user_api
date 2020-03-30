@@ -16,12 +16,17 @@ const actions = {
     async addUsers({ commit }, name) {
         const response = await axios.post('https://jsonplaceholder.typicode.com/users', name);
         commit('newName', response.data)
+    },
+    async deleteUser ({ commit }, id) {
+        await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+        commit('removeUser', id)
     }
 };
 
 const mutations = {
     setNames: (state, users) => (state.users = users),
-    newName: (state, user) => state.users.unshift(user)
+    newName: (state, user) => state.users.unshift(user),
+    removeUser: (state, id) => state.users = state.users.filter(user => user.id !== id)
 };
 
 export default {
