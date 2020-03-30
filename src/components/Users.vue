@@ -1,7 +1,9 @@
 <template>
     <div class="stylus">
 <b-list-group>
-  <b-list-group-item v-bind:key="user.id" v-for="user in allUsers">{{user.name}}</b-list-group-item>
+  <b-list-group-item v-bind:key="user.id" v-for="user in allUsers" class="inline">{{user.name}}
+      <i class="fas fa-trash-alt"></i>
+  </b-list-group-item>
 </b-list-group>
 
 </div>
@@ -24,7 +26,11 @@ export default {
 </script>
 
 <style scoped>
-    .mb-2{
+    .inline{
         display: inline-block;
+    }
+    i {
+        position: absolute;
+        margin-left: 5rem;
     }
 </style>

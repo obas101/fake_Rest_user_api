@@ -22,8 +22,12 @@ export default {
         ...mapActions(['addUsers']),
         onSubmit(e) {
             e.preventDefault();
-            this.addUsers(this.name);
-        }
+                let user = { 
+            name: this.name
+                }
+
+this.addUsers(user)
+}
     }
 }
 </script>
